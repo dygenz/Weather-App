@@ -1,0 +1,457 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    min-height: 100vh;
+    padding: 30px;
+    color: white;
+    background: #00bfff url(back-img.png);
+    background-blend-mode: multiply;
+    background-size: cover;
+    backdrop-filter: blur(5px);;
+    -webkit-backdrop-filter: blur(20px);
+    font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.navbar{
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.1)
+}
+
+.logo{
+    height: 50px;
+    font-size: 1.4rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.logo img{
+    width: 2rem;
+    height: auto
+}
+
+.hero-section{
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+:root {
+    --background-main :#ffffff2a;
+    --sun-color:  #FCE570
+}
+.nav-icon-container{
+    width: 33px;
+    height: 33px;
+    border: 1px solid white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #00000030;
+}
+.nav-icon-container:hover{
+    cursor: pointer;
+}
+.nav-icon{
+    width: 20px;
+    height: 20px; 
+}
+
+/* main section*/
+.greeting{
+    height: 40px;
+    display: flex;
+    gap: 1rem;
+}
+.icon{
+    width: 30px;
+    height: 30px;
+    color:var(--sun-color);
+}
+
+/* city */
+.search-city{
+    height: 47px;
+    position: relative;
+    width: 47%;
+}
+#search-city{
+    color: white;
+    font-size: 1.1rem;
+    width: 100%;
+    height: 44px;
+    background-color: var(--background-main);
+    border: 1px solid wheat;
+    border-radius: 20px;
+}
+input[type="search"]{
+    padding-left: 2rem;
+}
+#search-city::placeholder{
+    font-size: 1rem;
+    color: wheat;
+}
+#search-city:focus{
+    outline : none;
+    border: 2px solid #87CEFA;
+    box-shadow: 0 0 10px rgba(135,206,250,0.4)
+}
+
+/*Live updates*/
+.live-updates{
+    display: flex;
+}
+.search-icon{
+    width: 35px;
+    height: 35px;
+    border: 1px solid #4169E1;
+    border-radius: 50%;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:#4169E1;
+    position: relative;
+    left: 93%;
+    bottom: 39px;
+}
+.search-icon:hover{
+    cursor: pointer;
+}
+
+/*  Suggestions for search  */
+
+.suggestions{
+    width: 100%;
+    background-color: var(--background-main);
+    border-radius: 20px;
+    position: absolute;
+    top: 50px;
+    background:  #4292C6;
+    backdrop-filter: blur(15px);
+    overflow: hidden;
+    z-index: 1000;
+}
+.suggestion{
+    min-height:48px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.suggestion:hover{
+    background: rgba(255, 255, 255, .25);
+}
+
+/* Showing current place as heading */
+
+
+.current-city{
+    width: 100%;
+    font-size: 2.2rem;
+    font-weight: 700;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+.current-city div{
+    display: flex;
+}
+
+/* City and temprature */
+
+.city-and-temprature{
+    width: 100%;
+    height: auto;
+}
+.current-temprature{
+    height: 200px;
+    border: 1px solid var(--background-main);
+    border-radius: 20px;
+    background-color: var(--background-main);
+    display: flex;
+    justify-content: space-around;
+    padding: 1rem;
+}
+.icon-container{
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.large-icon{
+    width: 140px;
+    height: 140px;
+}
+.temprature-container{
+    display: flex;
+    align-items: center;
+}
+#temprature{
+    font-size: 100px;
+}
+#temprature-parameter{
+    font-size: 1.5rem;
+    height: 50px;
+}
+#temprature-parameter::before{
+    content: "\2103 ";
+}
+#sky-condition{
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.feels-like{
+    border: 1px solid wheat;
+    border-radius: 20px;
+    background-color: var(--background-main);
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+.feels-like::after{
+    font-size: 1.2rem;
+}
+
+.highest-temprature{
+    color: orange;
+    font-size: 2rem;
+    text-align: center;
+    margin: 1rem 0;
+}
+.highest-temprature span::after{
+    content: "\00B0";
+}
+.lowest-temprature span::after{
+    content:"\00B0" ;
+}
+.lowest-temprature{
+    text-align: center;
+    color: #0084CC;
+    font-size: 2rem;
+}
+.current-conditions{
+    width: 100%;
+    margin-left: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    padding-top: 5px;
+}
+.condition{
+    width: 30%;
+    height: auto;
+    border: 1px solid var(--background-main);
+    border-radius: 20px;
+    padding: 0.5rem;
+    text-align: center;
+    margin: 0 8px 3px 7px;
+    background-color: var(--background-main)
+}
+.condition svg{
+    width: 30px;
+    height: 30px;
+    margin-bottom: 5px;
+    color: #aad5db;
+}
+.condition-value{
+    font-size: 1.5rem;
+    line-height: 35px;
+}
+
+#sunriseset{
+    font-size: 1.1rem;
+}
+.feel-like::after{
+    content: "\00B0";
+}
+
+/*Five day forecast*/
+
+.five-day-forecast{
+    height: 150px;
+    border: 1px solid var(--background-main);
+    background-color: var(--background-main);
+    border-radius: 20px;
+    margin-top: 1.5rem;
+}
+.five-day-forecast h4{
+    padding: 10px 20px;
+}
+
+.old-forecasts{
+    display: flex;
+    justify-content: space-evenly;
+}
+.forecast-container{
+    width: 200px;
+    height: 100px;
+    background-color: var(--background-main);
+    border-radius: 20px;
+}
+.forecast-container p{
+    text-align: center;
+    padding: 5px;
+}
+.forecast{
+    display: flex;
+    justify-content: space-evenly;
+}
+.sun{
+    color: var(--sun-color);
+}
+
+.high-temprature{
+    font-size: 1.4rem;
+}
+.high-temprature::after{
+    content:"\00B0" ;
+}
+.low-temprature::after{
+    content: "\00B0";
+}
+
+.forecast-container span{
+    font-size: 0.8rem;
+    display: block;
+    text-align: center;
+    margin-top: 8px;
+}
+.forecast-weather-icon{
+    width:40px;
+    height:40px;
+}
+@media (max-width:768px) {
+    .live-updates{
+        display: block;
+    }
+    .current-conditions{
+        margin: 1rem 0;
+    }
+    .condition{
+        margin: 10px 22px 10px 0px;
+    }
+    .search-icon{
+        left: 87%;
+    }
+    .five-day-forecast{
+        height: 180px;
+    }
+    .forecast-container{
+        height: 120px;
+        width: 60px;
+    }
+    .forecast{
+        display: block;
+        text-align: center;
+    }
+    .forecast-container span {
+        display: none;
+    }
+}
+
+@media(max-width:480px) {
+    .hero-section{
+        height: 80px;
+    }
+    .greeting{
+        height: 25px;
+        gap: 5px;
+    }
+    .greeting h2{
+        font-size: 1.1rem;
+    }
+    .icon{
+        height: 20px;
+        width: 20px;
+    }
+    .search-city{
+        height: 25px;
+    }
+    #search-city{
+        height: 25px;
+        padding-left: 10px;
+        font-size: 0.8rem;
+    }
+    #search-city::placeholder{
+        font-size: 0.8rem;
+    }
+    .search-icon{
+        height: 18px;
+        width: 18px;
+        font-size: 0.7rem;
+        bottom: 23px;
+    }
+    .current-temprature{
+        height: 150px;
+    }
+    .icon-container{
+        width: 100px;
+    }
+    .large-icon{
+        height: 70px;
+        width: 70px;
+    }
+    #temprature{
+        font-size:70px
+    }
+    .feels-like{
+        font-size: 0.8rem;
+        padding: 5px;
+    }
+    #sky-condition{
+        font-size: 1.3rem;
+    }
+    .highest-temprature{
+        font-size: 1.2rem;
+    }
+    .lowest-temprature{
+        font-size: 1.2rem;
+    }
+    /* Weather-Conditions */
+    .condition{
+        width: 40%;
+    }
+    .condition-name{
+        font-size: 0.8rem;
+    }
+    .condition-value{
+        font-size: 1rem;
+    }
+    #sunriseset{
+        font-size: 0.8rem;
+    }
+    .forecast-weather-icon{
+        height: 25px;
+        width: 25px;
+    }
+    .high-temprature{
+        margin: 5px 0;
+    }
+}
+@media (max-width:420px) {
+    .search-icon{
+        left: 84%;
+    }
+    #sunriseset{
+        font-size: 0.6rem;
+    }
+    .forecast-container{
+        width: 50px;
+    }
+    .feels-like{
+        font-size: 0.6rem;
+    }
+}
