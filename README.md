@@ -8,7 +8,7 @@ A responsive weather application built with **HTML, CSS, and JavaScript** that p
 
 ---
 
-## 📌 Features
+## 📌 Features 
 
 - 🌍 Search weather by city
 - 📍 Default weather on page load
