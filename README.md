@@ -83,7 +83,8 @@ Weather-App/
 
 ## 📷 Screenshots
 
-(Add screenshots here)
+<img width="1361" height="693" alt="weather app" src="https://github.com/user-attachments/assets/02d40a86-d7db-4461-a5ec-d5fb6bad355d" />
+
 
 ---
 
