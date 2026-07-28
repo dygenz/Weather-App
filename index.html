@@ -30,7 +30,7 @@
 
     <!-- Hero section -->
 
-    <div class="hero-section">
+    <div class="hero-section" >
         <div class="greeting">
             <h2>
                 Good morning! 
@@ -98,7 +98,7 @@
                 </div>
             </div>
         </div>
-        <div class="current-conditions">
+        <div class="current-conditions weather-card">
             <div class="condition">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-droplet-icon lucide-droplet"><path d="M12 22a7 7 0 0 0 7-7c0-2-1-3.9-3-5.5s-3.5-4-4-6.5c-.5 2.5-2 4.9-4 6.5C6 11.1 5 13 5 15a7 7 0 0 0 7 7z"/></svg>
                 <p class="condition-name">Humidity</p>
@@ -131,10 +131,13 @@
             </div>
         </div>
     </div>
-    <div class="five-day-forecast">
+
+    <!-- Forecast -->
+
+    <div class="five-day-forecast weather-card">
         <h4>5-Day Forecast</h4>
-        <div class="old-forecasts">
-            <div class="forecast-container">
+        <div class="forecasts ">
+            <div class="forecast-container ">
                 <p>Wed</p>
                 <div class="forecast">
                     <svg class="forecast-weather-icon"
@@ -227,7 +230,27 @@
                 <span>Partly Cloudy</span>
             </div>
         </div>
+        <!-- Forecast api error -->
+        <div class="forecast-error">
+            <h3> ⚠️ Forecast unavailable . Please try again later</h3>
+        </div>
     </div>
+
+    <!-- Internet error -->
+    <div class="internet-error">
+        <h1>Unable to load Weather data</h1>
+        <p>WE couldn't fetch the latest weather information</p>
+        <p>Please check your internet connection and try again</p>
+        <button onclick="window.location.reload()" class="try-again">Try again</button>
+    </div>
+    
+    <!-- Weather Api errror -->
+     <div class="weather-error">
+        <h2>Unable to load current weather , Try again</h2>
+        <button onclick="window.location.reload()" class="try-again">Try again</button>
+     </div>
+    
+
     <script src="script.js"></script>
 </body>
 </html>
